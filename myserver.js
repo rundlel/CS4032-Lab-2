@@ -29,15 +29,17 @@ server.on('connection', function(socket){
 			socket.write(message + "IP:" + address + "\nPort:" + port + "\nStudentID:" + studentNo);
 			console.log(message);
 		}
-		
-
 	});
-});
 
-server.on('close', function(){
-	console.log("connection closed");
-})
+	socket.on("close", function(){
+		server.close();
+		console.log("connection closed");
+	});
 
-server.on('error', function(error){
-	console.log('OOOOOPS MY BAD' + error.message);
+	socket.on("error", function(error){
+		console.log('error' + error.message);
+	});
+
+
+		
 });
