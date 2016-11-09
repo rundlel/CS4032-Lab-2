@@ -1,12 +1,20 @@
 var net = require('net');
 
 var server = new net.createServer();
-
-var port = process.argv[2];
+var port;
 var IP = 10.62.0.140
 
 var studentNo = '13321661';
 
+if(!process.argv.[2])
+{
+	port=7000;
+	console.log("no port specified, using 7000");
+}
+else
+{
+	port = process.argv[2];
+}
 
 server.listen(port, IP, function(){
 	console.log("server listening")
