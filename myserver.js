@@ -38,6 +38,7 @@ server.on('connection', function(socket){
 		{
 			socket.write(message + "IP:" + address + "\nPort:" + port + "\nStudentID:" + studentNo);
 			console.log(message);
+			socket.pipe();
 			socket.end();
 		}
 	});
@@ -48,6 +49,7 @@ server.on('connection', function(socket){
 	});
 
 	socket.on("error", function(error){
+		console.log(error.message);
 	});
 
 });
