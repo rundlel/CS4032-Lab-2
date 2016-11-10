@@ -48,7 +48,6 @@ server.on('connection', function(socket){
 	});
 
 	socket.on("error", function(error){
-		console.log('error' + error.message);
 	});
 
 });
