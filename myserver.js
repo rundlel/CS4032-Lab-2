@@ -1,8 +1,9 @@
 var net = require('net');
+var IP = require('quick-local-ip');
 
 var server = new net.createServer();
 var port;
-var IP = 10.62.0.140
+var address = IP.getLocalIP4();
 
 var studentNo = '13321661';
 
@@ -16,7 +17,7 @@ else
 	port = process.argv[2];
 }
 
-server.listen(port, IP, function(){
+server.listen(port, address, function(){
 	console.log("server listening")
 });
 
