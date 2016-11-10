@@ -7,7 +7,7 @@ var address = IP.getLocalIP4();
 
 var studentNo = '13321661';
 
-if(!process.argv.[2])
+if(!process.argv[2])
 {
 	port=7000;
 	console.log("no port specified, using 7000");
