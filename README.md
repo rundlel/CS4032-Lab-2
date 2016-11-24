@@ -2,10 +2,6 @@
 
 Multithreaded server.
 
-|Name             |Student ID|
-|-----------------|:--------:|
-|Laura Rundle     |13321661  |
-
 #INSTRUCTIONS
 
 ##Step 1
